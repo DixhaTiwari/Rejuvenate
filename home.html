@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <title>Rejuvenate</title>
+  <link rel="stylesheet" href="home_style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-logo">
+        <a href="/" data-key="siteTitle">REJUVENATE</a>
+      </div>
+
+      <div class="right-header-group">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="home.html" data-key="navHome">Home</a></li>
+            <li><a href="blog.html" data-key="navBlog">Blog</a></li>
+            <li><a href="shop.html" data-key="navShop">Shop</a></li>    
+            <li><a href="contact.html" data-key="navContact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="utility-nav">
+          <div class="language-selector">
+            <select onchange="changeLanguage(this.value)">
+              <option value="en">ENG</option>
+              <option value="hin">हिन्दी</option>
+            </select>
+          </div>
+
+
+<a href="cart.html" class="cart-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="cart-count">0</span>
+  </a>
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-banner-section">
+    <div class="hero-banner-overlay">
+      <h1 class="hero-banner-headline" data-key="mainTitle">REJUVENATE</h1>
+      <p class="hero-banner-tagline" data-key="mainTagline">Inspired by KINTSUGI</p>
+      <small class="hero-banner-subtext" data-key="mainSubtext">~Broken is Beautiful~</small>
+    </div>
+  </section>
+
+  <section class="kintsugi-brand-section1 fade-scroll-section">
+    <div class="kintsugi-content1 split-container">
+      <div class="split-left"></div>
+      <div class="split-right">
+        <h2 class="kintsugi-headline1" data-key="artisanHeading">The Artisan Model</h2>
+        <p class="kintsugi-tagline1" data-key="artisanText">
+          Our artisans bring diverse skills under one roof, crafting with tradition and innovation.
+        </p>
+        <a href="https://timelesstokyo.com/article/cat_ttd/takunakano" class="split-link" target="_blank" rel="noopener" data-key="artisanLink">
+          More About Our Philosophy →
+        </a>
+      </div>
+    </div>
+    <div class="kintsugi-overlay1"></div>
+  </section>
+
+  <section class="kintsugi-brand-section2 fade-scroll-section">
+    <div class="kintsugi-content2 two-box-layout">
+      <div class="box left-box">
+        <h2 data-key="productGallery">Product Gallery</h2>
+        <p data-key="productGalleryText">
+          We blend traditional craftsmanship with modern design to give broken things new life. This is not just restoration—it's rebirth.
+        </p>
+        <a href="shop.html" class="gallery-btn" data-key="exploreProducts">Explore Products</a>
+      </div>
+      <div class="box right-box">
+      
+      </div>
+    </div>
+    <div class="kintsugi-overlay2"></div>
+  </section>
+
+  <section class="kintsugi-brand-section3 fade-scroll-section">
+    <div class="video-container">
+      <video autoplay muted loop playsinline class="video-background">
+        <source src="./videos/kintsugi.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div class="overlay"></div>
+
+      <div class="video-text-overlay">
+        <h1 data-key="ourChannel">Our Channel</h1>
+        <h3 data-key="channelTagline">Beautifying Broken Pottery.</h3>
+        <a href="https://youtu.be/EBUTQkaSSTY?si=WXDcR68inAwyrrFS" target="_blank" class="youtube-btn" data-key="watchOnYoutube">Watch on YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2 class="footer-logo" data-key="siteTitle">REJUVENATE</h2>
+        <p class="footer-tagline" data-key="footerTagline">Where broken becomes beautiful.</p>
+      </div>
+
+      <div class="footer-nav">
+        <ul>
+          <a href="blog.html" data-key="navAbout">About</a>
+          <a href="https://www.vaneetha.com/journal/kintsugi-beauty-in-the-broken" target="_blank" data-key="navPhilosophy">Philosophy</a>
+          <li><a href="shop.html" data-key="navShop">Shop</a></li>    
+          <li><a href="contact.html" data-key="navContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/kintsugi.visual" target="_blank" rel="noopener">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/kintsugi_btc" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/Kintsugi Spirit" target="_blank" rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+
+
+
+
+<form 
+  class="newsletter-form"
+  action="https://formspree.io/f/mwpbbrpg"
+  method="POST"
+  id="newsletterForm"
+>
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Subscribe to our newsletter"
+    required
+  >
+
+  <button type="submit">
+    Subscribe
+  </button>
+
+</form>
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const newsletterForm =
+    document.getElementById("newsletterForm");
+
+  newsletterForm.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const formData = new FormData(newsletterForm);
+
+    try {
+
+      const response = await fetch(newsletterForm.action, {
+
+        method: "POST",
+
+        body: formData,
+
+        headers: {
+          'Accept': 'application/json'
+        }
+
+      });
+
+      if(response.ok) {
+
+        alert("Thank you for subscribing!");
+
+        newsletterForm.reset();
+
+      } else {
+
+        alert("Something went wrong.");
+
+      }
+
+    } catch(error) {
+
+      alert("Network error. Please try again.");
+
+    }
+
+  });
+
+});
+
+</script>
+
+
+
+
+      </form>
+
+      <div class="footer-language">
+        <label for="lang-select" data-key="languageLabel">Language:</label>
+        <select id="lang-select" onchange="changeLanguage(this.value)">
+          <option value="en">ENG</option>
+          <option value="hin">हिन्दी</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Rejuvenate. All rights reserved.</p>
+  </div>
+
+  <script src="home_script.js"></script>
+
+</body>
+</html>

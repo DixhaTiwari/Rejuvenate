@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rejuvenate</title>
+  <link rel="stylesheet" href="blog_design.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-logo">
+        <a href="/" data-key="siteTitle">REJUVENATE</a>
+      </div>
+
+      <div class="right-header-group">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="home.html" data-key="navHome">Home</a></li>
+            <li><a href="blog.html" data-key="navBlog">Blog</a></li>
+            <li><a href="shop.html" data-key="navShop">Shop</a></li>    
+            <li><a href="contact.html" data-key="navContact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="utility-nav">
+          <div class="language-selector">
+            <select onchange="changeLanguage(this.value)">
+              <option value="en">ENG</option>
+              <option value="hin">हिन्दी</option>
+            </select>
+          </div>
+
+<a href="cart.html" class="cart-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="cart-count">0</span>
+  </a>
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="blog-video-section">
+    <div class="box-big">
+      <video autoplay muted loop playsinline class="video-background">
+        <source src="./videos/kintsugi2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="video-overlay-content">
+      <h2 data-key="blogHeroHeading">Rejuvenate – The Art of Kintsugi</h2>
+      <p data-key="blogHeroText">Experience the philosophy in motion — where broken becomes beautiful.</p>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-container">
+      <h2 data-key="meetArtisans">Meet the Artisans Behind the Gold</h2>
+      <p data-key="meetArtisansText">
+        Discover the passionate souls who breathe life into broken pottery. Every piece tells a story — of heritage, resilience, and the timeless Japanese craft of Kintsugi.
+      </p>
+      <a href="https://kyotojournal.org/creative-kyoto/mio-heki-kintsugi-artist-and-urushi-master/" target="_blank" class="golden-button" data-key="visitArtisan">Visit Artisan Website</a>
+    </div>
+  </section>
+
+  <section class="info-section2">
+    <div class="info-container2">
+      <h2 data-key="artisansStory">These artisans are not just creators —</h2>
+      <p data-key="artisansStoryText">
+        — they are storytellers. Every piece they touch carries scars, and through their skillful hands, those scars are transformed into symbols of strength and beauty. Rooted in the ancient philosophy of Kintsugi, they embrace flaws instead of hiding them. Gold is not just a material here; it’s a metaphor for resilience, hope, and healing. These craftspeople pour soul into every crack they restore, reminding us that broken things aren’t worthless — they’re just waiting to shine in new ways. By mending with care, they preserve not just the object, but also the spirit it holds. Witness their journey of restoration, and feel the magic of turning imperfections into art.
+      </p>
+    </div>
+  </section>
+
+  <section class="info-section3">
+    <div class="info-container3">
+      <h2 data-key="embraceFlaws">"Embracing Flaws, Creating Beauty"</h2>
+      <p data-key="embraceText">
+        Kintsugi teaches us that imperfections are not weaknesses—they’re a part of our story. Rather than hiding cracks, this art form highlights them with gold, turning damage into design. Each repaired line becomes a symbol of resilience, reminding us that healing can be beautiful. It’s a philosophy that celebrates authenticity, proving that our flaws make us unique—and truly valuable.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2 class="footer-logo" data-key="siteTitle">REJUVENATE</h2>
+        <p class="footer-tagline" data-key="footerTagline">Where broken becomes beautiful.</p>
+      </div>
+
+      <div class="footer-nav">
+        <ul>
+          <li><a href="blog.html" data-key="navAbout">About</a></li>
+          <li><a href="https://www.vaneetha.com/journal/kintsugi-beauty-in-the-broken" target="_blank" data-key="navPhilosophy">Philosophy</a></li>
+          <li><a href="shop.html" data-key="navShop">Shop</a></li>    
+          <li><a href="contact.html" data-key="navContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/kintsugi.visual" target="_blank" rel="noopener">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com/kintsugi_btc" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/Kintsugi Spirit" target="_blank" rel="noopener">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+
+    
+<form 
+  class="newsletter-form"
+  action="https://formspree.io/f/mwpbbrpg"
+  method="POST"
+  id="newsletterForm"
+>
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Subscribe to our newsletter"
+    required
+  >
+
+  <button type="submit">
+    Subscribe
+  </button>
+
+</form>
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const newsletterForm =
+    document.getElementById("newsletterForm");
+
+  newsletterForm.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const formData = new FormData(newsletterForm);
+
+    try {
+
+      const response = await fetch(newsletterForm.action, {
+
+        method: "POST",
+
+        body: formData,
+
+        headers: {
+          'Accept': 'application/json'
+        }
+
+      });
+
+      if(response.ok) {
+
+        alert("Thank you for subscribing!");
+
+        newsletterForm.reset();
+
+      } else {
+
+        alert("Something went wrong.");
+
+      }
+
+    } catch(error) {
+
+      alert("Network error. Please try again.");
+
+    }
+
+  });
+
+});
+
+</script>
+
+
+
+
+
+      <div class="footer-language">
+        <label for="lang-select" data-key="languageLabel">Language:</label>
+        <select id="lang-select" onchange="changeLanguage(this.value)">
+          <option value="en">ENG</option>
+          <option value="hin">हिन्दी</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Rejuvenate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="home_script.js"></script>
+</body>
+</html>

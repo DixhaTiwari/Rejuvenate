@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rejuvenate</title>
+  <link rel="stylesheet" href="contact_design.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-container">
+    <div class="site-logo">
+      <a href="/" data-key="siteTitle">REJUVENATE</a>
+    </div>
+
+    <div class="right-header-group">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="home.html" data-key="navHome">Home</a></li>
+          <li><a href="blog.html" data-key="navBlog">Blog</a></li>
+          <li><a href="shop.html" data-key="navShop">Shop</a></li>
+          <li><a href="contact.html" data-key="navContact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="utility-nav">
+        <div class="language-selector">
+          <select onchange="changeLanguage(this.value)">
+            <option value="en">ENG</option>
+            <option value="hin">हिन्दी</option>
+          </select>
+        </div>
+
+<a href="cart.html" class="cart-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="cart-count">0</span>
+  </a>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="fullscreen-bg">
+  <div class="text-overlay highlighted-text">
+    <h1 data-key="contactHeading1">We'd love to hear from you!</h1>
+    <h2 data-key="contactHeading2">Drop us a message below.</h2>
+  </div>
+</div>
+
+<section class="contact-form">
+  <div class="form-overlay"></div>
+
+  <div class="contact-container">
+    <h2 data-key="inquiryFormTitle">Inquiry Form</h2>
+    <p data-key="inquiryFormDesc">
+      Discover the passionate souls who breathe life into broken pottery. Every piece tells a story — of heritage, resilience, and the timeless Japanese craft of Kintsugi.
+    </p>
+
+ <form id="contactForm" class="inquiry-form" action="https://formspree.io/f/mwpbbrpg" method="POST">
+  <input type="text" name="name" data-key="formName" placeholder="Your Name" required />
+  <input type="email" name="email" data-key="formEmail" placeholder="Your Email" required />
+  <textarea name="message" data-key="formMessage" placeholder="Your Message" required></textarea>
+  <button type="submit" data-key="formSubmit">Submit</button>
+</form>
+
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-left">
+      <h2 class="footer-logo" data-key="siteTitle">REJUVENATE</h2>
+      <p class="footer-tagline" data-key="footerTagline">Where broken becomes beautiful.</p>
+    </div>
+
+    
+    <div class="footer-nav">
+      <ul>
+        <li><a href="blog.html" data-key="navAbout">About</a></li>
+        <li><a href="https://www.vaneetha.com/journal/kintsugi-beauty-in-the-broken" target="_blank" data-key="navPhilosophy">Philosophy</a></li>
+        <li><a href="shop.html" data-key="navShop">Shop</a></li>
+        <li><a href="contact.html" data-key="navContact">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-social">
+      <a href="https://www.instagram.com/kintsugi.visual" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/kintsugi_btc" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/Kintsugi Spirit" target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+   
+
+   
+<form 
+  class="newsletter-form"
+  action="https://formspree.io/f/mwpbbrpg"
+  method="POST"
+  id="newsletterForm"
+>
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Subscribe to our newsletter"
+    required
+  >
+
+  <button type="submit">
+    Subscribe
+  </button>
+
+</form>
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const newsletterForm =
+    document.getElementById("newsletterForm");
+
+  newsletterForm.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    const formData = new FormData(newsletterForm);
+
+    try {
+
+      const response = await fetch(newsletterForm.action, {
+
+        method: "POST",
+
+        body: formData,
+
+        headers: {
+          'Accept': 'application/json'
+        }
+
+      });
+
+      if(response.ok) {
+
+        alert("Thank you for subscribing!");
+
+        newsletterForm.reset();
+
+      } else {
+
+        alert("Something went wrong.");
+
+      }
+
+    } catch(error) {
+
+      alert("Network error. Please try again.");
+
+    }
+
+  });
+
+});
+
+</script>
+
+
+    <div class="footer-language">
+      <label for="lang-select" data-key="languageLabel">Language:</label>
+      <select id="lang-select" onchange="changeLanguage(this.value)">
+        <option value="en">ENG</option>
+        <option value="hin">हिन्दी</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Rejuvenate. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault(); 
+
+        const name = contactForm.querySelector('input[type="text"]').value.trim();
+        const email = contactForm.querySelector('input[type="email"]').value.trim();
+        const message = contactForm.querySelector('textarea').value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        alert(`Thank you, ${name}! Your message has been received.`);
+
+      
+        contactForm.reset();
+      });
+    }
+  });
+</script>
+
+
+
+<script src="home_script.js"></script>
+</body>
+</html>
